@@ -2,43 +2,144 @@
   margin: 0;
   padding: 0;
 }
+
+header {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.logo-text {
+  color: white;
+  font-family: 'Saira Stencil One',"Arial", sans-serif;
+  font-size: 8vw;
+}
+.logo-img {
+  content:url(../images/beedp780.png);
+/*  position: absolute;
+  left: 25px;
+  top: 25px;*/
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin: 15px;
+
+}
+
 h1 {
-  background-color: #2d002d;
+/*  background-color: #2d002d;*/
   color: white;
   font-family: "Arial", sans-serif;
-  padding: 30px;
-  position: sticky;
+/*  padding: 30px;*/
 }
 
 h2{
-	color: white;
-	margin:25px;
-}
-.container {
   display: flex;
-  justify-content: flex-end;
-/*  overflow: scroll;
-  flex-direction: column;*/
- }
-
-nav li{
-  display: inline-block;
-  margin: 10px;
-  position: relative;
-  bottom: 65px;
-  right: 25px
+	color: white;
+  font-family: 'Saira Stencil One',"Arial", sans-serif;
+  font-size: 30px;
+  justify-content: center;
+  text-decoration: underline;
+/*  margin: auto 25px;*/
 }
-
-nav a {
-  font-family: "Arial", sans-serif;
+h3 {
   color: white;
+  font-family: 'Saira Stencil One',"Arial", sans-serif;
+  font-size: 25px;
+  justify-content: center;
+  margin: 25px;
 }
+
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-6 {
+  width: 200px;
+  height: 60px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+  background: linear-gradient(0deg, #cc3399 0%, #ff0066 100%);
+} 
+
+.btn-6:hover {
+  color: blue;
+  font-weight: 750;
+}
+
+
+/* splash screen layout */
+.grid {
+  display: grid;
+/*  border: solid green; */
+  row-gap:10%;
+  grid-template-columns: 30% 40% 30%;
+  margin: auto;
+  margin-top: 65px;
+  height: 400px;
+  width: 1000px;
+}
+
+.item-outer-left {
+/*  border: solid orange; */
+  display: flex;
+  height: 90%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.item-outer-right {
+/*   border: solid orange; */
+  display: flex;
+  height: 90%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.item-mid {
+/*   border: solid orange; */
+  display: flex;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-image {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;  
+}
+
+.center-img {
+  height: 100%;
+  width: 100%;
+}
+
 
 body {
   background-color: black;
 }
 
 p {
+	font-size: 20px;
 	color: white;
 	margin: 25px;
 }
@@ -48,6 +149,9 @@ table {
 	margin: 25px;
 }
 
+table a {
+	color: black;
+}
 
 
 td,
@@ -86,8 +190,33 @@ th {
 	font-size: 21px;
 }
 
-/* legend squares */
+/* left and right panels  for body content*/
+.container {
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "left-panel right-panel";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
+  justify-items: center;
+}
+.left-panel{
+  display: flex;
+  flex-direction: column;
 
+}
+.right-panel{
+}
+
+.bulleted-list
+{
+  color: white;
+  margin: 10px 40px;
+  list-style-image: url('../images/purple-gem.gif');
+  font-size: 20px;
+}
+
+/* legend squares */
 .legend {
   	display: flex
   }
@@ -96,6 +225,11 @@ th {
 	flex: 5;
 }
 
+.xenos a {
+	display: inline;
+	position: relative;
+/*	right: 15px;*/
+}
   .archo-square {
   	background-color: #ffff66;
   	position: relative;
@@ -124,5 +258,27 @@ th {
 
   footer {
   	display: flex;
-  	justify-content: center;
+  	justify-content: space-around;
+    margin-top: 100px;
+    opacity: 0.9;
+    align-items: center;
+    font-size: 25px;
   }
+
+/* Projects styles */
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  flex-direction: row;
+  border: solid red;
+}
+.thumbnail {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+
+.thumbnail.art3 {
+  background-image:url(../images/art/mermgirl.png);
+}
