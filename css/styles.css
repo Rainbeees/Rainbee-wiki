@@ -12,9 +12,11 @@ header {
   color: white;
   font-family: 'Saira Stencil One',"Arial", sans-serif;
   font-size: 8vw;
+  display: inline-block;
 }
 .logo-img {
   content:url(../images/beedp780.png);
+  display: block;
 /*  position: absolute;
   left: 25px;
   top: 25px;*/
@@ -22,6 +24,22 @@ header {
   width: 100px;
   border-radius: 100px;
   margin: 15px;
+}
+.logo-img::before {
+  content:url(../images/beedp780.png);
+  dispaly: block
+/*  position: absolute;
+  left: 25px;
+  top: 25px;*/
+  height: 0;
+  border-radius: 100px;
+  margin: 15px;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.logo-img:hover {
+  Opacity: 75%;
 
 }
 
@@ -49,6 +67,18 @@ h3 {
   margin: 25px;
 }
 
+a {
+	color: #7846C0;
+	font-size: 1.25rem;
+}
+
+a:visited {
+	color: yellow;
+}
+a:hover {
+	color: lightgreen;
+/*	font-weight: bold;*/
+}
 
 .custom-btn {
   width: 130px;
@@ -67,6 +97,11 @@ h3 {
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
+}
+
+.custom-btn a{
+	color: white;
+	font-size: 1.5rem;
 }
 
 .btn-6 {
@@ -211,9 +246,22 @@ th {
 .bulleted-list
 {
   color: white;
-  margin: 10px 40px;
+  margin-left: 15%;
+  margin-top: 10px;
   list-style-image: url('../images/purple-gem.gif');
   font-size: 20px;
+}
+
+.xenos table {
+	background: #221C1C;
+	color: yellow;
+	font-size: 1.25rem;
+	padding: 10px;
+}
+
+.xenos img {
+  height: 100px;
+  width: 100px;
 }
 
 /* legend squares */
@@ -226,9 +274,13 @@ th {
 }
 
 .xenos a {
-	display: inline;
-	position: relative;
-/*	right: 15px;*/
+	color: yellow;
+}
+.xenos a:hover {
+	color: aquamarine;
+}
+.xenos a:active {
+	color: lime;
 }
   .archo-square {
   	background-color: #ffff66;
@@ -250,19 +302,12 @@ th {
 
   .archo {
   	background-color: #ffff66;
+	color: black;
   }
 
   .inactive {
   	background-color: darkgray;
-  }
-
-  footer {
-  	display: flex;
-  	justify-content: space-around;
-    margin-top: 100px;
-    opacity: 0.9;
-    align-items: center;
-    font-size: 25px;
+	color: black;
   }
 
 /* Projects styles */
@@ -282,3 +327,27 @@ th {
 .thumbnail.art3 {
   background-image:url(../images/art/mermgirl.png);
 }
+
+.centered-text {
+  
+  width: 80%;
+  margin: auto;
+}
+
+.question {
+
+  font-weight: 900;
+}
+.answer {
+  text-decoration: italic;
+}
+
+  footer {
+  	display: flex;
+  	justify-content: space-around;
+    margin-top: 100px;
+    opacity: 0.9;
+    align-items: center;
+    font-size: 25px;
+  }
+
